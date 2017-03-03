@@ -1,0 +1,24 @@
+.profile {
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  padding: 0;
+
+  /* From Bootstrap */
+  position: relative;
+  min-height: 1px;
+  width: 50%;
+  float: left;
+}
+
+.profile header {
+  background: #ddf3fc;
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.profile .content {
+  padding: 5px 10px;
+}
