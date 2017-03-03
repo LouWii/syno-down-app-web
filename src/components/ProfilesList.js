@@ -3,9 +3,10 @@ import { Link } from 'react-router'
 import Profile from './Profile'
 
 class ProfilesList extends React.Component {
+
   renderProfile(idx, profile) {
     return (
-      <Profile key={idx} profile={profile} />
+      <Profile key={idx} idx={idx} profile={profile} deleteProfile={this.props.deleteProfile} />
     )
   }
 
@@ -22,7 +23,7 @@ class ProfilesList extends React.Component {
 }
 
 ProfilesList.propTypes = {
-  profiles: React.PropTypes.arrayOf(React.PropTypes.object).isRequired
+  profiles: React.PropTypes.arrayOf(React.PropTypes.object)
 }
 
 export default ProfilesList;

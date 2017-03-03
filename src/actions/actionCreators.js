@@ -8,3 +8,10 @@ export function addProfile(name, url, login, password) {
     password
   }
 }
+
+export function deleteProfile(idx) {
+  return {
+    type: 'PROFILE_DELETE',
+    idx
+  }
+}
