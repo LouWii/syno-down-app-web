@@ -30,7 +30,12 @@ class Profile extends Component {
 
 Profile.propTypes = {
   idx: React.PropTypes.number.isRequired,
-  profile: React.PropTypes.object.isRequired
+  profile: React.PropTypes.shape({
+    name: React.PropTypes.string,
+    url: React.PropTypes.string,
+    login: React.PropTypes.string,
+    password: React.PropTypes.string,
+  }),
 }
 
 export default Profile
