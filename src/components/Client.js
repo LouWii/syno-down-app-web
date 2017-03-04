@@ -14,6 +14,8 @@ class Client extends React.Component {
     let url = this.state.profile.url
     if (this.state.profile.port && this.state.profile.port !== '') {
       url += ':'+this.state.profile.port
+    } else {
+      url += ':5000'
     }
     url += `/webapi/auth.cgi?api=SYNO.API.Auth&version=2&method=login&accou
 nt=${this.state.profile.login}&passwd=${this.state.profile.password}&session=DownloadStation&format=cookie`
