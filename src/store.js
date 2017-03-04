@@ -4,14 +4,13 @@ import { browserHistory } from 'react-router';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers/index';
 
-const storage = window.localStorage
 const stateStorageKey = 'syno-down-app'
 
 const defaultState = {
   profiles: []
 }
 
-const persistedState = storage.getItem(stateStorageKey) ? JSON.parse(localStorage.getItem(stateStorageKey)) : defaultState
+const persistedState = localStorage.getItem(stateStorageKey) ? JSON.parse(localStorage.getItem(stateStorageKey)) : defaultState
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
   rootReducer,
