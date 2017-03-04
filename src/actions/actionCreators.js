@@ -16,3 +16,23 @@ export function deleteProfile(idx) {
     idx
   }
 }
+
+export function clientLogin(url) {
+  return dispatch => {
+    fetch(url, (response) => {
+      console.log(response)
+      if(response.status === 200){
+        dispatch(clientLoggedIn(response.json))
+      } else { 
+        // console.error(response)
+      }
+    })
+  }
+}
+
+export function clientLoggedIn(sid) {
+  return {
+    type: 'CLIENT_LOGGEDIN',
+    sid
+  }
+}

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 import ProfilesList from './components/ProfilesList'
 import ProfileAdd from './components/ProfileAdd'
+import Client from './components/Client'
 import './styles/index.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -19,7 +20,8 @@ ReactDOM.render(
     <Router history={history}>
       <Route path="/" component={App}>
         <IndexRoute component={ProfilesList}></IndexRoute>
-        <Route path="/profile/add" component={ProfileAdd}></Route>
+        <Route path="/profiles/add" component={ProfileAdd}></Route>
+        <Route path="/profiles/:idx" component={Client}></Route>
       </Route>
     </Router>
   </Provider>,
