@@ -1,9 +1,10 @@
 
-export function addProfile(name, url, login, password) {
+export function addProfile(name, url, port, login, password) {
   return {
     type: 'PROFILE_ADD',
     name,
     url,
+    port,
     login,
     password
   }

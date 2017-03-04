@@ -16,7 +16,7 @@ class ProfileAdd extends React.Component {
 
   handleSave(e) {
     e.preventDefault()
-    this.props.addProfile(this.refs.profileName.value, this.refs.profileUrl.value, this.refs.profileLogin.value, this.refs.profilePassword.value)
+    this.props.addProfile(this.refs.profileName.value, this.refs.profileUrl.value, this.refs.profilePort.value, this.refs.profileLogin.value, this.refs.profilePassword.value)
     browserHistory.push('/')
   }
 
@@ -32,6 +32,10 @@ class ProfileAdd extends React.Component {
           <div className="form-group">
             <label htmlFor="profileUrl">URL / IP</label>
             <input ref="profileUrl" type="text" className="form-control" id="profileUrl" placeholder="http://192.168.1.100" />
+          </div>
+          <div className="form-group">
+            <label htmlFor="profilePort">Port (optionnal, default 5000)</label>
+            <input ref="profilePort" type="text" className="form-control" id="profilePort" placeholder="5000" />
           </div>
           <div className="form-group">
             <label htmlFor="profileLogin">Login</label>

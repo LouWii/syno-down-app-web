@@ -5,7 +5,7 @@ function profiles(state = [], action) {
     case 'PROFILE_ADD':
       return [
         ...state,
-        {name: action.name, url: action.url, login: action.login, password: action.password}
+        {name: action.name, url: action.url, port: action.port, login: action.login, password: action.password}
       ]
     case 'PROFILE_DELETE':
       return [
