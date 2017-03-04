@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import '../styles/Profile.css';
 
 class Profile extends Component {
@@ -20,7 +21,7 @@ class Profile extends Component {
           <p><strong>Login</strong> {this.props.profile.login}</p>
         </div>
         <div className="actions">
-          <button type="button" className="btn btn-primary btn-sm">Connect</button>
+          <Link className="btn btn-primary btn-sm" to={`/profiles/${this.props.idx}`}>Connect</Link>
           <button type="button" className="btn btn-danger btn-xs" onClick={this.handleDelete}>X</button>
         </div>
       </div>
